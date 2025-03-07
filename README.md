@@ -69,12 +69,12 @@ Batsim also outputs a report for each agent, detailing the number of charge even
 ### Install
 
 You can either:
-- Donload a pre-built executable from [releases](https://github.com/arup-group/batsim/releases), or
+- Donload a pre-built executable from [releases](https://github.com/arup-group/BatterySimulator/releases), or
 - Build your own executable using git and the rust toolchain
 
 #### Download
 
-1) Download binary from [Releases](https://github.com/arup-group/batsim/releases)
+1) Download binary from [Releases](https://github.com/arup-group/BatterySimulator/releases)
 2) Find and unzip downloaded file if required: tar -xvf EXECUTABLE.tar.xz
 3) Within the unzipped folder you should find the executable `batsim`
 4) To make the `batsim` command more accessible, add the directory where it is located to PATH (or move it somewhere already on your PATH)
