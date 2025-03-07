@@ -16,6 +16,10 @@ Batsim is heavilly inspired by concepts taken from **agent-based** and **activit
 - realistic representation of agent-level charging
 - temporal and spatial precision
 
+## Develoeprs
+
+This was developed by [Fred Shone](https://github.com/fredshone), [Panos Tsolderidis](https://github.com/panostsolerid), [Michael Fitzmaurice](https://github.com/mfitz) and [Kasia Kozlowska](https://github.com/KasiaKoz) in the Arup City Modelling Lab.
+
 ## Key Features
 
 Batsim uses a battery state simulation to allow agents to optimise their charging behaviour. Key features:
