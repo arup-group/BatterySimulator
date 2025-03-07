@@ -1,0 +1,24 @@
+[package]
+name = "batsim"
+version = "0.0.5"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+xml = { path = "../xml" }
+configuration = { path = "../configuration" }
+optimise = { path = "../optimise" }
+peek = { path = "../peek" }
+simulate = { path = "../simulate" }
+tracer = { path = "../tracer" }
+clap = { version = "4.2.1" , features = ["derive"] }
+indicatif = "0.17.3"
+anyhow = "1.0.70"
+csv = "1.2.1"
+test_dir = "0.2.0"
+serde_json = "1.0.95"
+
+[[bin]]
+name = "batsim"
+path = "main.rs"

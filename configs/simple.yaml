@@ -1,0 +1,26 @@
+name: simple
+
+battery_group:
+- name: default
+  capacity: 100  # kWh
+  initial: 100  # kWh
+  consumption_rate: 0.15  # kWh/km
+
+trigger_group:
+- name: default
+  trigger: 0.2  # proportion of capacity
+
+enroute_group:
+- name: default
+  charge_rate: 11  # kW
+
+activity_group:
+- name: default-at-home
+  activities: [home]
+  charge_rate: 3  # kW
+  filters:
+  - {key: building_type, values: [detached, semi-detached]}
+
+- name: freight
+  activities: [depot]
+  charge_rate: 11  # kW

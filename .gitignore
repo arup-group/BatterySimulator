@@ -1,0 +1,10 @@
+output_*
+tmp
+.vscode
+.idea
+default_*.profraw
+
+# Added by cargo
+
+/target
+/report

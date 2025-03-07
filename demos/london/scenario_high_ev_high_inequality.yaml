@@ -1,0 +1,55 @@
+name: high_ev_high_inequality
+scale: 10
+patience: 100
+seed: 1234
+
+battery_group:
+- name: high_income
+  capacity: 100  # kWh
+  initial: 100  # kWh
+  trigger: 20  # kWh
+  consumption_rate: 0.15  # kWh/km
+  filters:
+    - {key: subpopulation, values: [high income]}
+  p: 0.9
+
+- name: med_income
+  capacity: 100  # kWh
+  initial: 100  # kWh
+  trigger: 20  # kWh
+  consumption_rate: 0.15  # kWh/km
+  filters:
+    - {key: subpopulation, values: [medium income]}
+  p: 0.8
+
+- name: low_income
+  capacity: 100  # kWh
+  initial: 100  # kWh
+  trigger: 20  # kWh
+  consumption_rate: 0.15  # kWh/km
+  filters:
+    - {key: subpopulation, values: [low income]}
+  p: 0.5
+
+enroute_group:
+- name: default
+  charge_rate: 10  # kW
+
+activity_group:
+- name: default_home
+  activities: [home]
+  charge_rate: 3  # kW
+  p: 0.5
+
+- name: off_street
+  activities: [home]
+  charge_rate: 3  # kW
+  filters:
+    - {key: subpopulation, values: [high income, medium income]}
+    - {key: household_LAD, values: [Kensington and Chelsea, Westminster]}
+
+- name: work
+  activities: [work]
+  charge_rate: 11  # kW
+  filters:
+    - {key: subpopulation, values: [high income, medium income]}

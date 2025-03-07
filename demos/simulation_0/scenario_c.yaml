@@ -1,0 +1,25 @@
+name: scenario_c
+scale: 1
+patience: 10
+
+battery_group:
+- name: default
+  capacity: 20  # kWh
+  initial: 20  # kWh
+  trigger: 5  # kWh
+  consumption_rate: 1  # kWh/km
+  filters:
+  - {key: vehicle_type, values: [ev]}
+
+enroute_group:
+- name: default
+  charge_rate: 10  # kW
+
+activity_group:
+- name: at_home
+  activities: [home]
+  charge_rate: 3  # kW
+
+- name: at_work
+  activities: [work, business]
+  charge_rate: 10  # kW

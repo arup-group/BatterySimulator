@@ -1,0 +1,11 @@
+[package]
+name = "peek"
+version = "0.0.1"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+xml = { path = "../xml" }
+anyhow = "1.0.70"
+quick-xml = "0.28.1"

@@ -1,0 +1,73 @@
+name: example
+seed: 1234
+
+battery_group:
+- name: default
+  capacity: 100  # kWh
+  initial: 100  # kWh
+  consumption_rate: 0.15  # kWh/km
+
+- name: large-vehicle
+  capacity: 200  # kWh
+  initial: 200  # kWh
+  consumption_rate: 0.45  # kWh/km
+  filters:
+  - {key: vehicle_type, values: [hgv_ev, lgv_ev]}
+
+trigger_group:
+- name: default
+  trigger: 0.2  # proportion of capacity
+
+enroute_group:
+- name: default
+  charge_rate: 11  # kW
+
+- name: rapid
+  charge_rate: 30  # kW
+  p:  0.5
+  filters:
+  - {key: enroute_charge, values: [rapid]}
+
+activity_group:
+- name: default-at-home
+  activities: [home]
+  charge_rate: 3  # kW
+  filters:
+  - {key: home_parking, values: [offstreet]}
+
+- name: urban-on-street
+  activities: [home]
+  charge_rate: 3  # kW
+  p: 0.5
+  filters:
+  - {key: home_parking, values: [onstreet]}
+  - {key: area_type, values: [city, town]}
+
+- name: rural-on-street
+  activities: [home]
+  charge_rate: 3  # kW
+  p: 0.1
+  filters:
+  - {key: home_parking, values: [onstreet]}
+  - {key: area_type, values: [village, rural, other]}
+
+- name: at-work
+  activities: [work, business]
+  charge_rate: 3  # kW
+  p: 0.5
+  filters:
+  - {key: occupation, values: [type_1,type_2]}
+
+- name: destination
+  activities: [shop, medical, education, visit, other]
+  charge_rate: 3  # kW
+  p: 0.2
+
+- name: destination-rapid
+  activities: [shop, medical, education, visit, other]
+  charge_rate: 30  # kW
+  p: 0.05
+
+- name: freight
+  activities: [depot]
+  charge_rate: 11  # kW

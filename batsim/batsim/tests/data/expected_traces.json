@@ -1,0 +1,188 @@
+{
+  "people": {
+    "chris": {
+      "attributes": {
+        "subpopulation": "rich",
+        "age": "yes"
+      },
+      "trace": {
+        "plan": [
+          {
+            "LinkType": {
+              "start_time": 25201,
+              "end_time": 25656,
+              "lid": "2-3",
+              "distance": 20000.0,
+              "node": [
+                10000.0,
+                0.0
+              ]
+            }
+          },
+          {
+            "LinkType": {
+              "start_time": 25656,
+              "end_time": 25660,
+              "lid": "3-4",
+              "distance": 500.0,
+              "node": [
+                10100.0,
+                0.0
+              ]
+            }
+          },
+          {
+            "ActivityType": {
+              "start_time": 25660,
+              "end_time": 59400,
+              "act": "work",
+              "node": [
+                10100.0,
+                0.0
+              ]
+            }
+          },
+          {
+            "LinkType": {
+              "start_time": 59401,
+              "end_time": 59406,
+              "lid": "4-3",
+              "distance": 1000.0,
+              "node": [
+                10000.0,
+                0.0
+              ]
+            }
+          },
+          {
+            "LinkType": {
+              "start_time": 59406,
+              "end_time": 59861,
+              "lid": "3-2",
+              "distance": 20000.0,
+              "node": [
+                100.0,
+                0.0
+              ]
+            }
+          },
+          {
+            "LinkType": {
+              "start_time": 59861,
+              "end_time": 59866,
+              "lid": "2-1",
+              "distance": 1000.0,
+              "node": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          {
+            "LinkType": {
+              "start_time": 59866,
+              "end_time": 59870,
+              "lid": "1-2",
+              "distance": 500.0,
+              "node": [
+                100.0,
+                0.0
+              ]
+            }
+          },
+          {
+            "ActivityType": {
+              "start_time": 59870,
+              "end_time": 111600,
+              "act": "home",
+              "node": [
+                100.0,
+                0.0
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "nick": {
+      "attributes": {
+        "subpopulation": "poor",
+        "age": "no"
+      },
+      "trace": {
+        "plan": [
+          {
+            "LinkType": {
+              "start_time": 28801,
+              "end_time": 28806,
+              "lid": "2-1",
+              "distance": 1000.0,
+              "node": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          {
+            "LinkType": {
+              "start_time": 28806,
+              "end_time": 29260,
+              "lid": "1-5",
+              "distance": 10000.0,
+              "node": [
+                0.0,
+                10000.0
+              ]
+            }
+          },
+          {
+            "ActivityType": {
+              "start_time": 29260,
+              "end_time": 63000,
+              "act": "work",
+              "node": [
+                0.0,
+                10000.0
+              ]
+            }
+          },
+          {
+            "LinkType": {
+              "start_time": 63001,
+              "end_time": 63456,
+              "lid": "5-1",
+              "distance": 20000.0,
+              "node": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          {
+            "LinkType": {
+              "start_time": 63456,
+              "end_time": 63460,
+              "lid": "1-2",
+              "distance": 500.0,
+              "node": [
+                100.0,
+                0.0
+              ]
+            }
+          },
+          {
+            "ActivityType": {
+              "start_time": 63460,
+              "end_time": 115200,
+              "act": "home",
+              "node": [
+                100.0,
+                0.0
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

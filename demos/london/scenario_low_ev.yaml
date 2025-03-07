@@ -1,0 +1,23 @@
+name: low_ev
+scale: 10
+patience: 100
+seed: 1234
+
+battery_group:
+- name: high_income
+  capacity: 100  # kWh
+  initial: 100  # kWh
+  trigger: 20  # kWh
+  consumption_rate: 0.15  # kWh/km
+  filters:
+    - {key: subpopulation, values: [high income]}
+  p: 0.5  # 50% probability
+
+enroute_group:
+- name: default
+  charge_rate: 10  # kW
+
+activity_group:
+- name: at_home
+  activities: [home]
+  charge_rate: 3  # kW
